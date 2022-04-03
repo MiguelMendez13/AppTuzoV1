@@ -2,8 +2,6 @@ import { StyleSheet} from "react-native"
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexWrap: "nowrap",
-
     },
     viewBotonRegistar:{
         height: 10,
@@ -62,6 +60,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "black",
         margin: "2%",
+        borderRadius:20,
     },
     viewInputs: {
         height: 10,

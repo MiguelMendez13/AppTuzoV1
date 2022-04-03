@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image,Button,Alert,TouchableOpacity, TextInput } from 'react-native';
+import {Text, View,Alert,TouchableOpacity, TextInput } from 'react-native';
 import Header from "../general/";
 import styles from "./estilos.js"
 function Entrada(){
