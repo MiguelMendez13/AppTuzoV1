@@ -1,4 +1,5 @@
-import {Text, View,Alert,TouchableOpacity, TextInput } from 'react-native';
+import {Text, View,Alert,TouchableOpacity, TextInput} from 'react-native';
+import {Picker} from '@react-native-picker/picker';
 import Header from "../general/";
 import styles from "./estilos.js"
 
@@ -80,11 +81,15 @@ function Registrar(){
                 </View>
                 <View style={styles.linea}>
                     <Text style={styles.title}>Carrera:</Text>
-                    <TextInput style={styles.input}
+                    {/*<TextInput style={styles.input}
                       placeholder="Carrera"
                       onChangeText={(carrera)=>elementos.carrera=carrera}
 
-                    />
+    />*/}
+                    <Picker style={styles.input}>
+                        <Picker.Item label="ISC" value="ISC"/>
+                        <Picker.Item label="TIC's" value="TIC's"/>
+                    </Picker>       
                 </View>
                 <View style={styles.linea}>
                     <Text style={styles.title}>Grupo:</Text>
