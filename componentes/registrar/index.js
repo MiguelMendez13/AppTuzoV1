@@ -1,4 +1,5 @@
 import {Text, View,Alert,TouchableOpacity, TextInput} from 'react-native';
+import React, { useState } from "react";
 import {Picker} from '@react-native-picker/picker';
 import Header from "../general/";
 import styles from "./estilos.js"
@@ -27,13 +28,16 @@ function mostrar(elementos){
 }
 
 
+
+
 function Registrar(){
+    const [selectedValue, setSelectedValue] = useState("ISC");
     const elementos={
         matricula:0,
         nombre:"",
         apPaterno:"",
         apMaterno:"",
-        carrera:"",
+        carrera:selectedValue,
         grupo:"",
         correo:"",
         telefono:0,
@@ -42,6 +46,7 @@ function Registrar(){
 
 
     }
+    
 
 
     return (
@@ -81,12 +86,11 @@ function Registrar(){
                 </View>
                 <View style={styles.linea}>
                     <Text style={styles.title}>Carrera:</Text>
-                    {/*<TextInput style={styles.input}
-                      placeholder="Carrera"
-                      onChangeText={(carrera)=>elementos.carrera=carrera}
-
-    />*/}
-                    <Picker style={styles.input}>
+                    <Picker style={styles.input}
+                    selectedValue={selectedValue}
+                    onValueChange={(itemValue, itemIndex) => 
+                    setSelectedValue(itemValue)}
+                    >
                         <Picker.Item label="ISC" value="ISC"/>
                         <Picker.Item label="TIC's" value="TIC's"/>
                     </Picker>       
